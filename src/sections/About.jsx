@@ -1,4 +1,5 @@
 import CopyEmailButton from "../components/CopyEmailButton"
+import { Frameworks } from "../components/Frameworks"
 import { Globe } from "../components/ui/Globe"
 
 
@@ -45,6 +46,15 @@ const About = () => {
             </div>
             {/*grid 5 */}
             <div className="grid-default-color grid-5">
+                <div className="z-10 w-[50%]">
+                    <p className="headtext">Skills</p>
+                    <p className="subtext">
+                        Specialized in modern frameworks and programming languages to create efficient and user-friendly applications.
+                    </p>
+                </div>
+                <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+                    <Frameworks />
+                </div>
             </div>
         </div>
 
