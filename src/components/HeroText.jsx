@@ -11,18 +11,18 @@ const HeroText = () => {
             <div className='flex-col hidden md:flex c-space'>
                 <motion.h1 className='text-4xl font-medium' 
                     variants={variants} initial="hidden" animate="visible" transition={{delay:1}}
-                > Hi I'm ELIUD</motion.h1>
+                > Hi I'm ELIUD, -</motion.h1>
                 <div className='flex flex-col items-start'>
-                    <motion.p className='text-5xl font-medium text-neutral-300'
-                        variants={variants} initial="hidden" animate="visible" transition={{delay:1.2}}
-                        >A Developer <br/> Dedicated to Crafting </motion.p>
+                   
                     <motion.div 
                         variants={variants} initial="hidden" animate="visible" transition={{delay:1.6}}
                         >{/*Flip word form aceternity */}
                         <FlipWords className="font-black text-white text-6xl"
-                        words={["Web Dev." , "Full Stack Dev.", "Mobile App Dev."]}/>
+                        words={["I DESIGN" , "I DEVELOP", "I DELIVER"]}/>
                     </motion.div>
-                    
+                    <motion.p className='text-5xl font-medium text-neutral-300'
+                        variants={variants} initial="hidden" animate="visible" transition={{delay:1.2}}
+                        >Clean, Modern Software </motion.p>
                     {/*<p className='text-2xl'> 
                         Web and Software Solutions
                     </p>*/}

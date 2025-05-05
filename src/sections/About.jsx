@@ -1,3 +1,7 @@
+import CopyEmailButton from "../components/CopyEmailButton"
+import { Globe } from "../components/ui/Globe"
+
+
 const About = () => {
   return (
     <section className="c-space section-spacing">
@@ -24,9 +28,20 @@ const About = () => {
 
             {/*grid 3 */}
             <div className="grid-black-color grid-3">
+                <div className="z-10 w-[50%]">
+                    <p className="headtext">Location</p>
+                    <p className="subtext">I'm Based In Meknes, Morocco. <br />I Am Open to Work On Site <br /> and or Remotely.</p>
+                    <figure className="absolute left-[40%] top-[10%]">
+                       <Globe />
+                    </figure>
+                </div>
             </div>
             {/*grid 4 */}
             <div className="grid-special-color grid-4">
+                <div className="flex flex-col items-center justify-center gap-4 size-full">
+                    <p className="text-center headtext"> Let's build something together?</p>
+                    < CopyEmailButton />
+                </div>
             </div>
             {/*grid 5 */}
             <div className="grid-default-color grid-5">
