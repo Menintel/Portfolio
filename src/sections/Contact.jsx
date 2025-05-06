@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import emailjs from "@emailjs/browser"
+import Alert from '../components/Alert';
 
 const Contact = () => {
   const [formData, setFormData] = useState({name:"", email:"", message:"",});
   const [isLoading, setIsLoading] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState("Success");
+  const [alertMessage, setAlertMessage] = useState("");
+  const showAlertMessage = (type, message) => {
+    setAlertType(type)
+    setAlertMessage(message)
+    setShowAlert(true);
+    setTimeout(() => {setShowAlert(false)}, 5000);
+  } ;
   const handleChange = (e) => {
     setFormData({ ... formData, [e.target.name]: e.target.value })}
   const handleSubmit = async (e) => {
@@ -21,19 +31,21 @@ const Contact = () => {
         message: formData.message,
       },"LiiUKL6X3FllBq1TY");
       setIsLoading(false);
-      alert("Success");
       setFormData({name:"", email:"", message:""});
+      showAlertMessage(
+        "Success", "Your Message Has Been Sent.");
 
     }catch (error) {
       setIsLoading(false);
       console.log(error);
-      alert("FAILED");
+      showAlertMessage("danger","Error: Message NOT Sent.")
 
     }
     
   }
   return (
     <section className='relative flex items-center c-space section-spacing' >
+      {showAlert && < Alert type={alertType} text={alertMessage} />}
       <div className='flex flex-col items-center justify-center max-w-md p-5 
         mx-auto border border-white/10 rounded-2xl bg-primary ' >
           <div className='flex flex-col items-start w-full gap-5 mb-10'>
