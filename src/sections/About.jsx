@@ -47,10 +47,12 @@ const About = () => {
             {/*grid 5 */}
             <div className="grid-default-color grid-5">
                 <div className="z-10 w-[50%]">
-                    <p className="headtext">Skills</p>
+                    <p className="headtext">Tech Stack</p>
                     <p className="subtext">
                         Specialized in modern frameworks and programming languages to create efficient and user-friendly applications.
                     </p>
+                    <button className="mt-5 cursor-pointer" 
+                    >View Certifications</button>
                 </div>
                 <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
                     <Frameworks />
