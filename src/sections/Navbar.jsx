@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {motion} from "motion/react"
 
 function Navigation() {
@@ -16,6 +16,17 @@ function Navigation() {
 
 const Navbar = () => {
     const[isOpen, setIsOpen] = useState(false);
+    const mobileMenuRef = useRef(null);
+
+    useEffect(() => {
+        if (isOpen) { const handleClickOutside = (event) => {
+                if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+                    setIsOpen(false);}};
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+        }
+    }, [isOpen]);
+
   return (
     <div className={`fixed inset-x-0 z-20 w-full transition-colors duration-300 ${isOpen ? 'bg-black/60' : 'bg-transparent'}`}>
         <div className='mx-auto c-space max-w-7xl'>
@@ -30,6 +41,7 @@ const Navbar = () => {
             </div>
         </div>
         {isOpen && (<motion.div className='block overflow-hidden text-center sm:hidden'
+            ref={mobileMenuRef}
             initial={{opacity:0, x: -10}} animate={{ opacity:1, x:0}}
             style={{maxHeight:"100vh"}} transition={{ duration: 1}} >
             <nav className='pb-5'> <Navigation/> </nav>
