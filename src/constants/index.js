@@ -10,7 +10,7 @@ export const myProjects = [
       "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
       "Added payment systems, localization, and product filtering for functionality improvements.",
     ],
-    href: "",
+    href: "https://github.com/Menintel/flutterApp",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
@@ -158,7 +158,7 @@ export const myProjects = [
       "Optimized SEO and page speed using Vite.js for fast builds.",
       "Implemented custom widgets and plugin compatibility for extended functionality.",
     ],
-    href: "pcamabassadors.club",
+    href: "https://pcambassadors.club/",
     logo: "",
     image: "/assets/projects/wordpress-theme.jpg",
     tags: [
