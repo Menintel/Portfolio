@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import {motion} from "motion/react"
 
 function Navigation() {
+    const handleClick = (e, targetId) => {e.preventDefault(); 
+        const element = document.getElementById(targetId);
+        if (element) {element.scrollIntoView({behavior: 'smooth', block:'start'});}
+    };
     return <ul className='nav-ul'>
-        <li className='nav-li'><a href="#home" className='nav-link'>Home</a></li>
-        <li className='nav-li'><a href="#about" className='nav-link'>About</a></li>
-        <li className='nav-li'><a href="#projects" className='nav-link'>projects</a></li>
-        <li className='nav-li'><a href="#contact" className='nav-link'>contact</a></li>
+        <li className='nav-li'><a href="#home" className='nav-link' onClick={(e) => handleClick(e, 'home')}>Home</a></li>
+        <li className='nav-li'><a href="#about" className='nav-link' onClick={(e) => handleClick(e, 'about')} >About</a></li>
+        <li className='nav-li'><a href="#projects" className='nav-link' onClick={(e) => handleClick(e, 'projects')} >projects</a></li>
+        <li className='nav-li'><a href="#contact" className='nav-link' onClick={(e) => handleClick(e, 'contact')} >contact</a></li>
     </ul>
 }
 
