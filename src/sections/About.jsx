@@ -10,8 +10,8 @@ const About = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 mid:auto-rows-[18rem] mt-12">
             {/*grid 1 */}
             <div className="flex items-end grid-default-color grid-1">
-                <img src="assets/coding-pov.png" className="absolute scale-[2] -right-[5rem]
-                    -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"/>
+                <img src="assets/coding-pov.webp" className="absolute scale-[2] -right-[5rem]
+                    -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]" alt="coding-image-bg"/>
                 <div className="z-10">
                     <p className="headtext">Hi, My Name's <br/><b>ELIUD MUSENGE</b></p>
                     <p className="subtext">Am a Web and Software developer with a Degree in computer science.</p>

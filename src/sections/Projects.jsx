@@ -24,7 +24,7 @@ const Projects = () => {
             <Project key={project.id} {...project} setPreview={setPreview} />
         ))}
         {preview && (<motion.img className="fixed top-0 left-0 z-50 object-cover h-40
-            rounded-lg shadow-lg pointer-events-none w-60 " src={preview} alt="" 
+            rounded-lg shadow-lg pointer-events-none w-60 " src={preview} alt="project-img" 
             style={{x:springX, y:springY}}
             />)}
 

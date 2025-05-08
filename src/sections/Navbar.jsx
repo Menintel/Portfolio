@@ -34,8 +34,10 @@ const Navbar = () => {
                 <a href="/" className='text-xl font-bold transition-colors text-neutral-400 hover:text-white'> 
                     MENINTEL 
                 </a>
-                <button onClick={()=> setIsOpen(!isOpen)} className='flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden'>
-                    <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} className='w-6 h-6'/>
+                <button onClick={()=> setIsOpen(!isOpen)} 
+                    aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                    className='flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden'>
+                    <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} className='w-6 h-6' alt='menu-icon' />
                 </button>
                 <nav className='hidden sm:flex'><Navigation/></nav>
             </div>
