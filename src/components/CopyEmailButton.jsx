@@ -27,7 +27,7 @@ const CopyEmailButton = () => {
           className="flex items-center justify-center gap-2"
           initial={{opacity:0, y:-10}} animate={{opacity:1, y:0}} exit={{opacity:0, y:-10}}
             transition={{duration:0.2, ease: "easeInOut"}}   >
-        <img src="assets/copy-done.svg" className="w-4" alt="Copied-icon" />
+        <img src="assets/copy-done.svg" className="w-4" alt="Copied-icon" width={16} height={16} />
           Email Address Copied </motion.p>):
 
         (<motion.p 
@@ -35,7 +35,7 @@ const CopyEmailButton = () => {
           className="flex items-center justify-center gap-2"
           initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}
             transition={{duration:0.4}}  >
-        <img src="assets/copy.svg" className="w-4" alt="copy-icon"/>
+        <img src="assets/copy.svg" className="w-4" alt="copy-icon" width={16} height={16} />
         Copy Email Address
       </motion.p>)}
       </AnimatePresence>

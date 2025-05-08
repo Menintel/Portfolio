@@ -69,12 +69,12 @@ const Contact = () => {
                 <label htmlFor="name" className='field-lable'>Full Name</label>
                 <input type="text" id='name' name='name' className='field-input field-input-focus'
                     placeholder='Enter Your Name / Company Name' required autoCapitalize='name' 
-                    value={formData.name} onChange={handleChange} />
+                    value={formData.name} onChange={handleChange}  autoComplete='name' />
             </div>
             <div className='mb-5'>
                 <label htmlFor="email" className='field-lable'>Email</label>
                 <input type="email" id='email' name='email' className='field-input field-input-focus' 
-                    placeholder='yourname@**mail.com' required autoCapitalize='email' 
+                    placeholder='yourname@**mail.com' required autoCapitalize='email' autoComplete='email'
                     value={formData.email} onChange={handleChange} />
             </div>
             <div className='mb-5'>
